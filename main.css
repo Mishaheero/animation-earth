@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(img/galactic.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.moon {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transform: rotateZ(0deg) translate(270px) rotateY(90deg) rotateX(90deg);
+    animation: orbita 10s infinite;
+    animation-timing-function: linear;
+}
+
+.earth {
+    width: 380px;
+    height: 380px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    margin: auto;
+    transform: rotateX(-70deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.orbita {
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    border: 2px solid gray;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    margin: auto;
+    transform-style: preserve-3d;
+    transform: rotateX(70deg) rotateY(0deg) rotateZ(0deg);
+}
+
+@keyframes orbita {
+    0% {
+        transform: rotateZ(0deg) translate(272px) rotateY(90deg) rotateX(90deg);
+    }
+    50% {
+        transform: rotateZ(180deg) translate(272px) rotateY(90deg) rotateX(270deg);
+    }
+    100% {
+        transform: rotateZ(360deg) translate(272px) rotateY(90deg) rotateX(450deg);
+    }
+}
